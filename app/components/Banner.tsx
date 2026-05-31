@@ -2,57 +2,63 @@ import Button from "./Button";
 
 export default function Banner() {
   return (
-    <section className="relative px-6 py-16">
+    <section className="relative overflow-hidden py-24">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl" />
+      </div>
 
-      {/* glow background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-blue-500/20 blur-3xl rounded-full" />
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-2">
+        <div className="space-y-6">
+          <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
+            Web Developer • Technical Support
+          </span>
 
-      {/* TOP SECTION: 2 COLUMN LAYOUT */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-
-        {/* LEFT SIDE */}
-        <div className="text-center flex flex-col gap-6">
-          <h1 className="font-bold text-4xl md:text-5xl">
-            Mario Granados
+          <h1 className="text-5xl font-bold leading-tight md:text-6xl">
+            Websites that help your business stand out.
           </h1>
 
-          <h2 className="text-2xl md:text-3xl text-white/80">
-            Web Developer & Technical Support
-          </h2>
-
-          <p className="text-lg md:text-xl text-white/70">
-            I design and build modern, responsive websites for small businesses and
-            individuals. My focus is clean design, strong performance, and SEO
-            optimization so your site doesn’t just look good — it gets found.
+          <p className="max-w-xl text-lg leading-relaxed text-white/70">
+            I'm Mario Granados. I design and build fast, modern websites for
+            small businesses and individuals, with a focus on performance,
+            mobile responsiveness, and SEO.
           </p>
 
-          <div className="flex gap-5 justify-center">
+          <div className="flex flex-wrap gap-4">
             <Button btnText="Hire Me" />
-            <Button btnText="About Me" />
+            <Button btnText="View My Work" />
+          </div>
+
+          <div className="flex gap-8 pt-4 text-white/60">
+            <div>
+              <p className="text-2xl font-bold text-white">UX/UI</p>
+              <p className="text-sm">Moden Designs</p>
+            </div>
+
+            <div>
+              <p className="text-2xl font-bold text-white">100%</p>
+              <p className="text-sm">Responsive Design</p>
+            </div>
+
+            <div>
+              <p className="text-2xl font-bold text-white">SEO</p>
+              <p className="text-sm">Optimized</p>
+            </div>
           </div>
         </div>
 
-        {/* RIGHT SIDE (IMAGE) */}
+        {/* Image */}
         <div className="flex justify-center md:justify-end">
-          <div
-            className="h-64 w-64 md:h-80 md:w-80 bg-cover bg-center rounded-xl shadow-lg"
-            style={{ backgroundImage: "url('/laptop.png')" }}
-          />
+          <div className="relative">
+            <div className="absolute inset-0 rounded-3xl bg-blue-500/20 blur-2xl" />
+
+            <img
+              src="/laptop.png"
+              alt="Laptop showcasing web development work"
+              className="relative w-full max-w-md rounded-3xl border border-white/10 shadow-2xl"
+            />
+          </div>
         </div>
       </div>
-
-      {/* BOTTOM SECTION */}
-      <div className="relative z-10 mt-16 text-center max-w-3xl mx-auto">
-        <h4 className="font-bold text-3xl mb-2">
-          Let me make you a site!
-        </h4>
-
-        <p className="text-lg md:text-xl text-white/70">
-          From landing pages to full business websites, I help you establish a
-          strong online presence and turn visitors into customers.
-        </p>
-      </div>
-
     </section>
   );
 }
