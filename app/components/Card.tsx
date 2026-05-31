@@ -5,7 +5,7 @@ type Props = {
 }
 export default function Card({title, text, imagePath}: Props) {
   return (
-    <div className="relative w-full max-w-md mx-auto neon ">
+    <div className="relative w-80 my-5 max-w-md mx-auto neon ">
       
       {/* image */}
       <div

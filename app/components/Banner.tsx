@@ -11,7 +11,7 @@ export default function Banner() {
       <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
         {/* LEFT SIDE */}
-        <div className="text-left flex flex-col gap-6">
+        <div className="text-center flex flex-col gap-6">
           <h1 className="font-bold text-4xl md:text-5xl">
             Mario Granados
           </h1>
@@ -26,7 +26,7 @@ export default function Banner() {
             optimization so your site doesn’t just look good — it gets found.
           </p>
 
-          <div className="flex gap-4">
+          <div className="flex gap-5 justify-center">
             <Button btnText="Hire Me" />
             <Button btnText="About Me" />
           </div>
