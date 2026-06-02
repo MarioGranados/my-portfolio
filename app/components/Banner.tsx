@@ -1,11 +1,9 @@
 import Button from "./Button";
+import FX from "./FX";
 
 export default function Banner() {
   return (
     <section className="relative overflow-hidden py-24">
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-blue-500/20 blur-3xl" />
-      </div>
 
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-2">
         <div className="space-y-6">

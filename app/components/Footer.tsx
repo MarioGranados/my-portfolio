@@ -1,27 +1,29 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center text-center gap-6 my-8 p-2 ">
+    <footer className="flex flex-col items-center text-center gap-6 my-8 p-2 z-10">
       <ul className="grid grid-cols-2 gap-x-12 gap-y-2 text-center">
         <p className="font-bold">Quick Links</p>
-        <a href="#">Home</a>
-        <a href="#">Services</a>
-        <a href="#">About</a>
-        <a href="#">Pricing</a>
-        <a href="#">SEO</a>
+        <Link href="/">Home</Link>
+        <Link href="/services">Services</Link>
+        <Link href="/about">About</Link>
+        <Link href="/pricing">Pricing</Link>
+        <Link href="/seo">SEO</Link>
       </ul>
 
       <ul className="flex flex-col items-center">
         <p className="font-bold">Contact</p>
-        <a href="#">Phone number</a>
-        <a href="#">Email</a>
-        <a href="#">United States</a>
+        <Link href="#">Phone number</Link>
+        <Link href="#">Email</Link>
+        <Link href="#">United States</Link>
       </ul>
 
       <div className="text-center">
         <p>Copyright Information</p>
         <ul className="flex justify-center gap-4">
-          <a href="#">Privacy</a>
-          <a href="#">Terms of Use</a>
+          <Link href="/privacy">Privacy</Link>
+          <Link href="/terms">Terms of Use</Link>
         </ul>
       </div>
 
