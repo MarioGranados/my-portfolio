@@ -48,3 +48,9 @@ body {
   transform: scale(1.05);
   transition: 0.2s ease;;
 }
+
+.unset_sticky {
+  position: unset;
+  top: unset;
+  transition: 200ms;
+}

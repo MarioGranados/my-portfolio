@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Button from "./Button";
 import FX from "./FX";
 
@@ -5,8 +6,8 @@ export default function Banner() {
   return (
     <section className="relative overflow-hidden py-24">
 
-      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-16 px-6 md:grid-cols-2">
-        <div className="space-y-6">
+      <div className="relative z-10 mx-auto grid max-w-7xl items-center p-6 md:p-16 md:gap-5 md:grid-cols-2">
+        <div className="space-y-6 md:order-1 order-2">
           <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
             Web Developer • Technical Support
           </span>
@@ -22,8 +23,8 @@ export default function Banner() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <Button btnText="Hire Me" />
-            <Button btnText="View My Work" />
+            <Link href="/contact" className=" neon-btn px-8 py-2 rounded-lg text-white bg-black/50 backdrop-blur-lg cursor-pointer"> Hire me!</Link>
+            <Link href="/portfolio" className=" neon-btn px-8 py-2 rounded-lg text-white bg-black/50 backdrop-blur-lg cursor-pointer"> Check Out My Work</Link>
           </div>
 
           <div className="flex gap-8 pt-4 text-white/60">
@@ -45,14 +46,14 @@ export default function Banner() {
         </div>
 
         {/* Image */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative">
-            <div className="absolute inset-0 rounded-3xl bg-blue-500/20 blur-2xl" />
+        <div className="flex justify-center md:justify-end md:order-2 order-1">
+          <div className="relative ">
+            <div className="absolute inset-0 rounded-3xl bg-blue-500/20 blur-2xl -z-10 hidden" />
 
             <img
-              src="/laptop.png"
+              src="/BannerPhoto.png"
               alt="Laptop showcasing web development work"
-              className="relative w-full max-w-md rounded-3xl border border-white/10 shadow-2xl"
+              className="object-cover object-center overflow-hidden "
             />
           </div>
         </div>
