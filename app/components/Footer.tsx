@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center text-center gap-6 my-8 p-2 z-10">
+    <footer className="flex flex-col items-center text-center gap-6 py-8 p-2 z-10 bg-black/40 backdrop-blur-lg">
       <p className="font-bold">Quick Links</p>
       <ul className="grid grid-cols-2 gap-x-12 gap-y-2 text-center">
         <Link className="transition-all duration-300 hover:bg-blue-800 rounded-2xl p-2" href="/">Home</Link>

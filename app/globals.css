@@ -3,6 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+
+  --bg: #0b1120;
+  --surface: #111827;
+
+  --text: #e2e8f0;
+
+  --primary: #22d3ee;
+  --accent: #8b5cf6;
+
 }
 
 @theme inline {
@@ -21,13 +31,13 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--text);
 }
 
 .neon {
-  box-shadow: 0 0 20px #22d3ee;
-  border: 1px solid #22d3ee;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.4);
+  border: 1px solid rgba(34, 211, 238, 0.4);
   transition: 500ms;
 }
 
@@ -53,4 +63,21 @@ body {
   position: unset;
   top: unset;
   transition: 200ms;
+}
+
+.links_color {
+  color: #e2e8f0;
+  transition: 250ms;
+}
+
+.links_color:hover {
+  color: #22d3ee;
+  transition: 250ms;
+}
+
+.btn_bg {
+  color: #8B5CF6
+}
+.btn_bg:hover {
+  color: #A78BFA
 }

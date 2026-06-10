@@ -5,10 +5,9 @@ import FX from "./FX";
 export default function Banner() {
   return (
     <section className="relative overflow-hidden py-24">
-
       <div className="relative z-10 mx-auto grid max-w-7xl items-center p-6 md:p-16 md:gap-5 md:grid-cols-2">
-        <div className="space-y-6 md:order-1 order-2">
-          <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
+        <div className="space-y-6 md:order-1 order-2 text-center md:text-left">
+          <span className="inline-block rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 ">
             Web Developer • Technical Support
           </span>
 
@@ -16,15 +15,48 @@ export default function Banner() {
             Websites that help your business stand out.
           </h1>
 
-          <p className="max-w-xl text-lg leading-relaxed text-white/70">
+          <p className="max-w-xl text-lg leading-relaxed text-white/70 text-center md:text-left">
             I'm Mario Granados. I design and build fast, modern websites for
             small businesses and individuals, with a focus on performance,
             mobile responsiveness, and SEO.
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className=" neon-btn px-8 py-2 rounded-lg text-white bg-black/50 backdrop-blur-lg cursor-pointer"> Hire me!</Link>
-            <Link href="/portfolio" className=" neon-btn px-8 py-2 rounded-lg text-white bg-black/50 backdrop-blur-lg cursor-pointer"> Check Out My Work</Link>
+          <div className="flex gap-4 md:flex-wrap justify-center md:justify-start">
+            <Link
+              href="/contact"
+              className="
+bg-violet-600
+hover:bg-violet-500
+text-white
+font-semibold
+px-6
+py-3
+rounded-lg
+transition-all
+hover:scale-105
+cursor-pointer
+"
+            >
+              Hire me!
+            </Link>
+            <Link
+              href="/portfolio"
+              className="
+bg-transparent
+border
+border-cyan-400
+text-cyan-400
+hover:bg-cyan-400/10
+hover:shadow-[0_0_20px_rgba(34,211,238,0.5)]
+px-6
+py-3
+rounded-lg
+transition
+cursor-pointer
+"
+            >
+              Check Out My Work
+            </Link>
           </div>
 
           <div className="flex gap-8 pt-4 text-white/60">

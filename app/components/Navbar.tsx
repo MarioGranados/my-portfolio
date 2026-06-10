@@ -21,15 +21,15 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`z-20 backdrop-blur-lg border border-white/10  transition-all duration-300 sticky top-0 py-6 px-8
+      className={`z-20 bg-slate-900/70 backdrop-blur-lg  sticky top-0 py-6 px-8 transition-all duration-200
  
-  ${scrolled ? "bg-black/60 my-2 mx-6 rounded-xl shadow-lg top-5" : "bg-blue-800/50 neon"}`}
+  ${scrolled ? "bg-black/60 my-2 mx-6 rounded-xl shadow-lg top-5" : "bg-blue-800/50"}`}
     >
       <div className=" text-white">
         <nav className="grid grid-cols-3 items-center">
           {/* Left */}
           <div className="justify-self-start hidden md:flex">
-            <Link href="/" className="font-bold">
+            <Link href="/" className="font-bold links_color">
               MarioGranados
             </Link>
           </div>
@@ -37,19 +37,29 @@ export default function Navbar() {
           {/* Center */}
           <ul className="hidden md:flex justify-center gap-10 font-bold">
             <li>
-              <Link href="/">Home</Link>
+              <Link className="links_color" href="/">
+                Home
+              </Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link className="links_color" href="/about">
+                About
+              </Link>
             </li>
             <li>
-              <Link href="/services">Services</Link>
+              <Link className="links_color" href="/services">
+                Services
+              </Link>
             </li>
             <li>
-              <Link href="/pricing">Pricing</Link>
+              <Link className="links_color" href="/pricing">
+                Pricing
+              </Link>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <Link className="links_color" href="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
 
@@ -57,7 +67,9 @@ export default function Navbar() {
           <div className="justify-self-end hidden md:flex">
             <a
               href="/portfolio"
-              className=" neon-btn px-8 py-2 rounded-lg text-white bg-white/20 backdrop-blur-lg cursor-pointer"
+              className="bg-transparent border border-cyan-400 text-cyan-400 px-5 py-2 rounded-lg
+hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]
+transition cursor-pointer"
             >
               My Work
             </a>
@@ -74,24 +86,36 @@ export default function Navbar() {
       {isOpen ? (
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            isOpen ? "max-h-60 opacity-100 translate-y-0" : "max-h-0 opacity-0 -translate-y-2"
+            isOpen
+              ? "max-h-60 opacity-100 translate-y-0"
+              : "max-h-0 opacity-0 -translate-y-2"
           }`}
         >
           <ul className="flex flex-col items-center justify-center py-4">
             <li className="m-1 font-bold">
-              <Link href="/">Home</Link>
+              <Link className="links_color" href="/">
+                Home
+              </Link>
             </li>
             <li className="m-1 font-bold">
-              <Link href="/about">About Me</Link>
+              <Link className="links_color" href="/about">
+                About Me
+              </Link>
             </li>
             <li className="m-1 font-bold">
-              <Link href="/services">Services</Link>
+              <Link className="links_color" href="/services">
+                Services
+              </Link>
             </li>
             <li className="m-1 font-bold">
-              <Link href="/pricing">Pricing</Link>
+              <Link className="links_color" href="/pricing">
+                Pricing
+              </Link>
             </li>
             <li className="m-1 font-bold">
-              <Link href="/contact">Contact</Link>
+              <Link className="links_color" href="/contact">
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

@@ -1,5 +1,128 @@
-import Maintenance from "../components/Maintenance";
+"use client";
+
+import { useState } from "react";
 
 export default function Contact() {
-    return(<Maintenance/>)
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
+    e.preventDefault();
+
+    try {
+      // TODO: Add API call here later
+      // await fetch("/api/contact", { ... });
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  return (
+    <section className="max-w-3xl mx-auto px-6 py-16 z-10">
+      <div className="bg-black/60 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg p-8 neon">
+        {submitted ? (
+          <div className="text-center py-10">
+            <h1 className="text-4xl font-bold mb-4">
+              Thank You!
+            </h1>
+
+            <p className="text-xl">
+              I will reach out to you soon.
+            </p>
+          </div>
+        ) : (
+          <>
+            <h1 className="text-4xl font-bold text-center mb-4">
+              Contact Me
+            </h1>
+
+            <p className="text-center mb-8">
+              Interested in a website or have a project in mind?
+              Send me a message and I'll get back to you as soon
+              as possible.
+            </p>
+
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-6"
+            >
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block mb-2 font-semibold"
+                >
+                  Name
+                </label>
+
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full p-3 rounded-lg bg-white/5 border border-white/20 focus:outline-none focus:border-blue-400"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block mb-2 font-semibold"
+                >
+                  Email
+                </label>
+
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  className="w-full p-3 rounded-lg bg-white/5 border border-white/20 focus:outline-none focus:border-blue-400"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="business"
+                  className="block mb-2 font-semibold"
+                >
+                  Business Name (Optional)
+                </label>
+
+                <input
+                  id="business"
+                  type="text"
+                  placeholder="Business Name"
+                  className="w-full p-3 rounded-lg bg-white/5 border border-white/20 focus:outline-none focus:border-blue-400"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block mb-2 font-semibold"
+                >
+                  Project Details
+                </label>
+
+                <textarea
+                  id="message"
+                  rows={6}
+                  placeholder="Tell me about your project..."
+                  className="w-full p-3 rounded-lg bg-white/5 border border-white/20 focus:outline-none focus:border-blue-400 resize-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="px-6 py-3 rounded-lg bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg transition hover:bg-white/15 hover:scale-105 cursor-pointer"
+              >
+                Send Message
+              </button>
+            </form>
+          </>
+        )}
+      </div>
+    </section>
+  );
 }

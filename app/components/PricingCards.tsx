@@ -19,18 +19,12 @@ export default function PricingCard({
   features,
 }: Props) {
   return (
-    <div className="neon mx-5 my-10 bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-lg p-6">
-      <h4 className="text-center text-2xl font-bold mb-4">
-        {title}
-      </h4>
+    <div className="neon mx-5 my-10 bg-slate-900/40 backdrop-blur-lg border border-white/10  rounded-2xl shadow-lg p-6">
+      <h4 className="text-center text-2xl font-bold mb-4">{title}</h4>
 
       <div className="text-center mb-6">
-        <p className="text-4xl font-bold">
-          ${setupFee}
-        </p>
-        <p className="text-gray-300">
-          One-Time Setup
-        </p>
+        <p className="text-4xl font-bold">${setupFee}</p>
+        <p className="text-gray-300">One-Time Setup</p>
       </div>
 
       <div className="mb-6 space-y-2">
@@ -52,14 +46,16 @@ export default function PricingCard({
             className="flex justify-between items-center p-2"
           >
             <span>{feature.text}</span>
-            <span className="text-green-400 font-bold">
-              ✓ Included
-            </span>
+            <span className="text-green-400 font-bold">✓ Included</span>
           </li>
         ))}
       </ul>
 
-      <button className="w-full px-5 py-2 rounded-lg text-white bg-white/5 backdrop-blur-lg border border-white/20 hover:bg-white/10 transition">
+      <button
+        className="w-full bg-white/5 bbg-transparent border border-cyan-400 text-cyan-400 px-5 py-2 rounded-lg
+hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]
+transition cursor-pointer"
+      >
         Contact Me
       </button>
     </div>
